@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const Main = () => {
+    // animate languages
   const [englishValue, changeEnglishValue] = useState(0);
   const [persianValue, changePersianValue] = useState(0);
   useEffect(() => {
@@ -15,6 +17,14 @@ const Main = () => {
       if (englishValue < 80) changeEnglishValue(englishValue + 1);
     }, 10);
   }, [englishValue]);
+
+  // animate progress linebars
+  const ref = useRef();
+  const view = useInView(ref, { once: true });
+  const animation = useAnimation();
+  useEffect(() => {
+    if (view) animation.start({ width: '20px' });
+  }, [view]);
 
   return (
     <div className="h-[45%] bg-[#20202A] overflow-scroll">
@@ -79,7 +89,8 @@ const Main = () => {
       <hr className="opacity-20 mx-2" />
 
       {/* skills */}
-      <div className="flex justify-between m-5"></div>
+      <div className="flex justify-between m-5" ref={ref}>
+      </div>
 
       {/* ticks */}
       <div className="flex justify-between m-5"></div>

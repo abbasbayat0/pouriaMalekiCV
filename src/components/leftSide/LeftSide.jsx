@@ -4,7 +4,7 @@ import Header from "./Header";
 import { useEffect, useState } from "react";
 
 const LeftSide = () => {
-  const [sort, changeSort] = useState<boolean>(false);
+  const [sort, changeSort] = useState(false);
 
   useEffect(() => {
     if(window.innerWidth >= 640) changeSort(true);
