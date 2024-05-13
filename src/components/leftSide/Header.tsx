@@ -17,7 +17,7 @@ const Header = () => {
       </div>
 
       {/* description */}
-      <div className="mt-3">
+      <div className="mt-3  ">
         <p className="text-gray-400 text-center opacity-90 text-xs tracking-wider font-poppins">Electrical Engineer</p>
         <p className="text-gray-400 text-center opacity-90 text-xs tracking-wider font-poppins mt-1">Control Sys. Student</p>
       </div>
