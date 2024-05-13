@@ -8,18 +8,18 @@ const Header = () => {
         <img src={photo} alt="Pouria Maleki" />
 
         {/* online dot */}
-        <div className="w-5 h-5 rounded-full bg-[#FFC107] absolute right-0 bottom-0 animate-pulse"></div>
+        <div className="w-4 h-4 rounded-full bg-[#FFC107] absolute right-1 bottom-1 animate-pulse"></div>
       </div>
 
       {/* title */}
-      <div className="mt-5">
+      <div className="mt-3">
         <strong className="text-white font-poppins font-semibold tracking-wider">Pouria Maleki</strong>
       </div>
 
       {/* description */}
-      <div className="mt-2">
+      <div className="mt-3">
         <p className="text-gray-400 text-center opacity-90 text-xs tracking-wider font-poppins">Electrical Engineer</p>
-        <p className="text-gray-400 text-center opacity-90 text-xs tracking-wider font-poppins">Control Sys. Student</p>
+        <p className="text-gray-400 text-center opacity-90 text-xs tracking-wider font-poppins mt-1">Control Sys. Student</p>
       </div>
     </div>
   )
